@@ -12,13 +12,13 @@ You should be able to hand steering, changing gears, and moving (speed in other 
  */
 
 public class Vehicle {
-    private int name;
-    private int size;
+    private String name;
+    private String size;
 
     private int currentVelocity;
     private int currentDirection;
 
-    public Vehicle(int name, int size) {
+    public Vehicle(String name, String size) {
 
         this.name = name;
         this.size = size;
@@ -38,11 +38,11 @@ public class Vehicle {
         System.out.println("Vehicle move(): Moving at " + currentVelocity + "in direction " + currentDirection);
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
