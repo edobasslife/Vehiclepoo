@@ -18,24 +18,24 @@ public class Vehicle {
     private int currentVelocity;
     private int currentDirection;
 
-    public Vehicle(String name, String size) {
+    public Vehicle(String name, String size) { //constructor de Vehicle
 
         this.name = name;
         this.size = size;
 
-        this.currentDirection = 0;
+        this.currentDirection = 0; //inicializamos en 0 por lo que no se pasan como parametro en el constructor
         this.currentVelocity = 0;
     }
 
-    public void steer(int direction) {
-        this.currentDirection += direction;
-        System.out.println("Vehicle.steer(): Steering at" + currentDirection + "degress");
+    public void steer(int direction) { //metodo direccion
+        this.currentDirection += direction; //this para referencia la variable currentDirecction e ir sumando con el parametro direccion
+        System.out.println("Vehicle.steer(): Steering at " + currentDirection + " degress"); //imprimo el resultado
     }
 
-    public void move(int velocity, int direction) {
-        currentVelocity = velocity;
+    public void move(int velocity, int direction) { //metodo mover
+        currentVelocity = velocity; // se asigna valores a variables currentVelocity y currentDirection
         currentDirection = direction;
-        System.out.println("Vehicle move(): Moving at " + currentVelocity + "in direction " + currentDirection);
+        System.out.println("Vehicle move(): Moving at " + currentVelocity + " in direction " + currentDirection);
     }
 
     public void setName(String name) {
@@ -54,8 +54,8 @@ public class Vehicle {
         this.currentDirection = currentDirection;
     }
 
-    public void stop(){
-        this.currentVelocity =0;
+    public void stop(){ // metodo stop
+        this.currentVelocity =0; //velocidad se pone en 0
     }
 
     public int getCurrentVelocity() {
